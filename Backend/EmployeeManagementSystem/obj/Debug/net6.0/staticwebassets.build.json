@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "HuSVQz35IbJwkeq1xlhGBdzy+2wQ5V1EVnEIpyQ3XWA=",
+  "Source": "EmployeeManagementSystem",
+  "BasePath": "_content/EmployeeManagementSystem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeeManagementSystem\\wwwroot",
+      "Source": "EmployeeManagementSystem",
+      "ContentRoot": "C:\\Users\\shubh\\OneDrive\\Desktop\\CV_Project\\Backend\\Backend\\EmployeeManagementSystem\\EmployeeManagementSystem\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagementSystem",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\shubh\\OneDrive\\Desktop\\CV_Project\\Backend\\Backend\\EmployeeManagementSystem\\EmployeeManagementSystem\\wwwroot\\uploads\\263f2d88-2892-4554-a73e-c5f2fb1ebadf_img2.png",
+      "SourceId": "EmployeeManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shubh\\OneDrive\\Desktop\\CV_Project\\Backend\\Backend\\EmployeeManagementSystem\\EmployeeManagementSystem\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagementSystem",
+      "RelativePath": "uploads/263f2d88-2892-4554-a73e-c5f2fb1ebadf_img2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\263f2d88-2892-4554-a73e-c5f2fb1ebadf_img2.png"
+    }
+  ]
+}
