@@ -1,0 +1,76 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Employee List</h2>
+
+  <!-- Export/Print Buttons -->
+  <div class="mb-3 text-center">
+    <button class="btn btn-outline-primary me-2" (click)="exportToCSV()">Export to CSV</button>
+    <button class="btn btn-outline-secondary me-2" (click)="exportToPDF()">Export to PDF</button>
+    <button class="btn btn-outline-success" (click)="printEmployeeList()">Print</button>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input type="text" class="form-control" placeholder="Search by name, position, or office" [(ngModel)]="searchTerm"
+        (input)="applyFiltersAndSort()" />
+    </div>
+
+    <!-- Sort Options -->
+    <div class="col-md-4">
+      <select class="form-control" [(ngModel)]="sortField" (change)="applyFiltersAndSort()">
+        <option value="" disabled selected>Sort By</option>
+        <option value="name">Name</option>
+        <option value="salary">Salary</option>
+        <option value="position">Position</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control" [(ngModel)]="sortOrder" (change)="applyFiltersAndSort()">
+        <option value="" disabled selected>Sort Order</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert alert-success text-center" role="alert">
+    {{ successMessage }}
+  </div>
+
+  <!-- Employee Cards -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let employee of employees">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <!-- Text Section -->
+          <div class="flex-grow-1">
+            <h5 class="card-title">{{ employee.name }}</h5>
+            <p class="card-text"><strong>Position:</strong> {{ employee.position }}</p>
+            <p class="card-text"><strong>Salary:</strong> {{ employee.salary | currency }}</p>
+            <div class="d-flex">
+              <button class="btn btn-primary btn-sm me-2" (click)="viewDetails(employee.id)">View Details</button>
+              <button class="btn btn-warning btn-sm me-2" (click)="editEmployee(employee.id)">Edit</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">Delete</button>
+            </div>
+          </div>
+          <!-- Profile Picture Section -->
+          <div>
+            <img *ngIf="employee.profilePicUrl" [src]="employee.profilePicUrl" alt="{{ employee.name }}"
+              class="img-thumbnail" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add New Employee Button -->
+  <div class="text-center">
+    <button class="btn btn-success btn-lg" (click)="addEmployee()">Add New Employee</button>
+  </div>
+
+  <!-- No Employees Found Message -->
+  <div *ngIf="employees.length === 0" class="alert alert-warning text-center mt-4">
+    No employees found.
+  </div>
+</div>

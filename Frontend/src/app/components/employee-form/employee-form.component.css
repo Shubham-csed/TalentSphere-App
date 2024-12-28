@@ -1,0 +1,29 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.invalid-feedback {
+  display: none;
+  color: red;
+}
+
+input.ng-invalid.ng-touched~.invalid-feedback {
+  display: block;
+}
+
+.btn {
+  margin: 5px;
+}

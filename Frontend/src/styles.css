@@ -1,0 +1,25 @@
+/* Global styles */
+html,
+body {
+    height: 100%;
+    /* Full height for both html and body */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Arrange header, content, and footer in a column */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+main {
+    flex: 1;
+    /* Ensures the main content takes up available space */
+}

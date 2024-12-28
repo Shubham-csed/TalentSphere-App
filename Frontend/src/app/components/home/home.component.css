@@ -1,0 +1,27 @@
+.container {
+  background-color: #f4f6f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.list-group-item {
+  font-size: 1rem;
+}
+
+h2 {
+  color: #333;
+}

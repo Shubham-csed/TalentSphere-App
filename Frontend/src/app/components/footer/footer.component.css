@@ -1,0 +1,18 @@
+/* Footer styles */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    /* Keeps the footer always visible at the bottom */
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.container p {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    /* Prevent additional spacing below the text */
+}

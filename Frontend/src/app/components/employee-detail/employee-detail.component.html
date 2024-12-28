@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Employee Details</h2>
+  <div *ngIf="successMessage" class="alert alert-success text-center" role="alert">
+    {{ successMessage }}
+  </div>
+  <div *ngIf="employee" class="card shadow-sm">
+    <div class="card-body">
+      <img *ngIf="employee.profilePicUrl" [src]="employee.profilePicUrl" alt="{{ employee.name }}"
+        class="img-thumbnail mb-3" style="max-width: 200px;border-radius: 50%;">
+      <p class="card-text"><strong>ID:</strong> {{ employee.id }}</p>
+      <p class="card-text"><strong>Name:</strong> {{ employee.name }}</p>
+      <p class="card-text"><strong>Position:</strong> {{ employee.position }}</p>
+      <p class="card-text"><strong>Office:</strong> {{ employee.office }}</p>
+      <p class="card-text"><strong>Salary:</strong> {{ employee.salary | currency }}</p>
+      <p class="card-text"><strong>Department:</strong> {{ employee.department }}</p>
+      <p class="card-text"><strong>Date of Joining:</strong> {{ employee.dateOfJoining.substr(0,10) }}</p>
+      <p class="card-text"><strong>Contact:</strong> {{ employee.contactNumber }}</p>
+      <p class="card-text"><strong>Email:</strong> {{ employee.email }}</p>
+      <p class="card-text"><strong>Address:</strong> {{ employee.address }}</p>
+
+
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-warning" (click)="editEmployee()">Edit</button>
+        <button class="btn btn-danger" (click)="deleteEmployee()">Delete</button>
+        <button class="btn btn-secondary" (click)="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!employee" class="alert alert-warning text-center">
+    <p>No employee details available.</p>
+  </div>
+</div>

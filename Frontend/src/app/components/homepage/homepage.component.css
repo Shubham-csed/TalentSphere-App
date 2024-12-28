@@ -1,0 +1,81 @@
+/* Overall Container */
+.homepage-container {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border: 3px solid #007bff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #f9f9f9;
+}
+
+/* Slideshow Image */
+.slideshow-image {
+    width: 100%;
+    height: 400px;
+    /* Set a fixed height */
+    display: block;
+    object-fit: cover;
+    /* Ensures consistency in size without distortion */
+    transition: opacity 1s ease-in-out;
+    border-radius: 15px;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 38px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Navigation Dots */
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+.dot:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard Button */
+.btn-primary {
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}

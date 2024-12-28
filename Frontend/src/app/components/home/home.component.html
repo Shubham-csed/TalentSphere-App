@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Employee Dashboard</h2>
+
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="card text-white bg-primary mb-3 shadow">
+        <div class="card-header">Total Employees</div>
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ totalEmployees }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-success mb-3 shadow">
+        <div class="card-header">Average Salary</div>
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ averageSalary | currency }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-warning mb-3 shadow">
+        <div class="card-header">Departments</div>
+        <div class="card-body">
+          <canvas id="departmentChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-info mb-3 shadow">
+        <div class="card-header">Joining Trends</div>
+        <div class="card-body">
+          <canvas id="joiningTrendsChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <h5 class="text-center">Recently Added Employees</h5>
+      <ul class="list-group">
+        <li *ngFor="let employee of recentEmployees" class="list-group-item">{{ employee.name }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

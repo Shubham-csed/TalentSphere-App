@@ -1,0 +1,21 @@
+<div class="homepage-container text-center mt-5">
+    <h1 class="mb-3">Welcome to TalentSphere</h1>
+    <p class="lead mb-5">Manage your employees efficiently and effectively.</p>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <img [src]="images[currentIndex]" class="slideshow-image" alt="Slideshow Image">
+        <div class="caption"> </div>
+
+        <!-- Navigation Dots -->
+        <div class="dots-container">
+            <span class="dot" *ngFor="let image of images; let i = index" [class.active]="i === currentIndex"
+                (click)="goToSlide(i)">
+            </span>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <a routerLink="/home" class="btn btn-primary btn-lg shadow">View Dashboard</a>
+    </div>
+</div>
