@@ -2,7 +2,7 @@
 
 - 'TalentSphere' application is designed to manage employees in an Organization.
 
-- Application is based on Angular as a Frontend technology and ASP.NET C# as Backend technology and Postgresql as Database
+- Application is based on Angular as a Frontend technology and ASP.NET Core, C# as Backend technology and Postgresql as Database
 
 - Application features:
    => Dashboard analytics with total employees, avg salary, department, joining trends and recently created employees
